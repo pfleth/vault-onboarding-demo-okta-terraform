@@ -18,6 +18,8 @@ The setup root requires admin auth to Vault and Okta. This creates the necessary
 
 Applications are onboarded to app via unique groups in both Okta and Vault. Memberships to those groups determines Vault access for user logins.
 
+It is assumed that this step will be somewhat flexible in a real environment. It is also assumed this root will be exposed as a self service option through automation or perhaps the SNOW + Terraform integration
+
 ```shell
 cd ../2_onboard_app
 terraform apply -auto-approve
