@@ -51,8 +51,6 @@ data "vault_policy_document" "enumeration" {
 }
 
 resource "vault_policy" "enumeration" {
-  // vault_policy.enumeration["dev-ro"]
-  // vault_policy.enumeration["prod-rw"]
   for_each = toset(local.enumeration)
 
   name   = "vault-${var.app_id}-${each.value}"
